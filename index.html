@@ -24,13 +24,19 @@
 
 <script>
     function check() {
-        const input = document.getElementById("pw").value;
+        const input = document.getElementById("pw").value.toLowerCase();
         const display = document.getElementById("msg");
-        
-        // Change "Secret123" to whatever your heart desires
+        // They should now be autocorrect to lowercase regardly of what case they typed in.
+
+        // Change "67" to whatever your heart desires
         if (input === "67") {
             display.style.color = "#ffa500";
             display.innerHTML = "Haha funny. Like the meme?... Try again.";
+        
+        } else if (input === "password") {
+            display.style.colour = "ffa500";
+            display.innerHTML = "Wow good one. Haven't heard that before. Try again when you've got a serious answer."
+
         } else {
             display.style.color = "#ff4444";
             display.innerHTML = "Unlucky, that's incorrect. Try again with something else.";
