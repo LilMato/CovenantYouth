@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classified Access</title>
+    <title>The Somewhat Amazing Youth Group Race</title>
     <style>
         body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #121212; color: white; margin: 0; }
         .box { text-align: center; padding: 40px; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
@@ -16,7 +16,7 @@
 <body>
 
 <div class="box">
-    <h2>Enter Credentials</h2>
+    <h2>What's the password?</h2>
     <input type="password" id="pw" placeholder="Password...">
     <button onclick="check()">Unlock</button>
     <p id="msg"></p>
@@ -28,11 +28,11 @@
         const display = document.getElementById("msg");
         
         // Change "Secret123" to whatever your heart desires
-        if (input === "Secret123") {
-            display.innerHTML = "INSTRUCTION: The package is under the 2kg rock.";
+        if (input === "67") {
+            display.innerHTML = "Haha funny. Like the meme?... Try again.";
         } else {
             display.style.color = "#ff4444";
-            display.innerHTML = "Access Denied. Try again, if you must.";
+            display.innerHTML = "Unlucky, that's incorrect. Try again with something else.";
         }
     }
 </script>
