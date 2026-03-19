@@ -19,7 +19,7 @@
                                         transform: translateY(-50%); background: none; 
                                                 border: none; color: #888; cursor: pointer; font-size: 18px;
                                                     }
-    //The Wiggle Instructions
+    /* The Wiggle Instructions */
         @keyframes shake {
         0% {transform: translateX(0);}
         25% {transform: translateX(-10px);}
@@ -73,7 +73,7 @@
             box.classList.remove("shake-now");
         
         } else if (input === "password") {
-            display.style.colour = "ffa500";
+            display.style.color = "ffa500";
             display.innerHTML = "Wow good one. Haven't heard that before. Try again when you've got a serious answer."
             box.classList.remove("shake-now");
 
@@ -85,7 +85,7 @@
         }else {
             display.style.color = "#ff4444";
             display.innerHTML = "Unlucky, that's incorrect. Try again with something else.";
-            box.classList.add("shake-now);
+            box.classList.add("shake-now");
                               setTimeout(() => {
                                   box.classList.remove("shake-now);
                                                        }, 300);
