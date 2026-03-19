@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classified Access</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #121212; color: white; margin: 0; }
+        .box { text-align: center; padding: 40px; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        input { padding: 12px; border-radius: 6px; border: 1px solid #444; background: #2a2a2a; color: white; width: 200px; outline: none; }
+        button { padding: 12px 20px; border-radius: 6px; border: none; background: #007bff; color: white; cursor: pointer; font-weight: bold; margin-left: 5px; }
+        button:hover { background: #0056b3; }
+        #msg { margin-top: 20px; font-weight: bold; color: #00ff88; min-height: 1.5em; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Enter Credentials</h2>
+    <input type="password" id="pw" placeholder="Password...">
+    <button onclick="check()">Unlock</button>
+    <p id="msg"></p>
+</div>
+
+<script>
+    function check() {
+        const input = document.getElementById("pw").value;
+        const display = document.getElementById("msg");
+        
+        // Change "Secret123" to whatever your heart desires
+        if (input === "Secret123") {
+            display.innerHTML = "INSTRUCTION: The package is under the 2kg rock.";
+        } else {
+            display.style.color = "#ff4444";
+            display.innerHTML = "Access Denied. Try again, if you must.";
+        }
+    }
+</script>
+
+</body>
+</html>
