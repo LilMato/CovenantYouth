@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Somewhat Amazing Youth Group Race</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #121212; color: white; margin: 0; }
-        .box { text-align: center; padding: 40px; border: 1px solid #333; border-radius: 12px; background: #1e1e1e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        input { padding: 12px; border-radius: 6px; border: 1px solid #444; background: #2a2a2a; color: white; width: 200px; outline: none; }
-        button { padding: 12px 20px; border-radius: 6px; border: none; background: #007bff; color: white; cursor: pointer; font-weight: bold; margin-left: 5px; }
-        button:hover { background: #0056b3; }
-        #msg { margin-top: 20px; font-weight: bold; color: #00ff88; min-height: 1.5em; }
-    </style>
+            /* ... existing styles ... */
+                .input-container { position: relative; display: inline-block; }
+                    input { padding-right: 40px; } /* Space for the eye icon */
+                        .toggle-btn { 
+                                position: absolute; right: 10px; top: 50%; 
+                                        transform: translateY(-50%); background: none; 
+                                                border: none; color: #888; cursor: pointer; font-size: 18px;
+                                                    }
+                                                    </style>
+
+                                                    <div class="box">
+                                                        <h2>Enter Credentials</h2>
+                                                            <div class="input-container">
+                                                                    <input type="password" id="pw" placeholder="Password...">
+                                                                            <button class="toggle-btn" onclick="toggleView()">👁️</button>
+                                                                                </div>
+                                                                                    <button onclick="check()">Unlock</button>
+                                                                                        <p id="msg"></p>
+                                                                                        </div>
+                                                                                    </style>
 </head>
 <body>
 
 <div class="box">
-    <h2>What's the password?</h2>
-    <input type="password" id="pw" placeholder="Password...">
-    <button onclick="check()">Unlock</button>
-    <p id="msg"></p>
-</div>
+        <h2>Enter Credentials</h2>
+            <div class="input-container">
+                    <input type="password" id="pw" placeholder="Password...">
+                            <button class="toggle-btn" onclick="toggleView()">👁️</button>
+                                </div>
+                                    <button onclick="check()">Unlock</button>
+                                        <p id="msg"></p>
+                                        </div>
 
 <script>
     function check() {
