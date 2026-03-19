@@ -24,21 +24,23 @@
                                                                                     <button onclick="check()">Unlock</button>
                                                                                         <p id="msg"></p>
                                                                                         </div>
-                                                                                    </style>
 </head>
 <body>
 
-<div class="box">
-        <h2>Enter Credentials</h2>
-            <div class="input-container">
-                    <input type="password" id="pw" placeholder="Password...">
-                            <button class="toggle-btn" onclick="toggleView()">👁️</button>
-                                </div>
-                                    <button onclick="check()">Unlock</button>
-                                        <p id="msg"></p>
-                                        </div>
-
 <script>
+    function toggleView() {
+        const input = document.getElementById("pw");
+        const btn = document.querySelector(".toggle-btn");
+
+        if (input.type === "password") {
+            input.type = "text";
+            btn.innerHTML = "🔒";
+
+        } else {
+            input.type = "password";
+            btn.innerHTML = "👁️";
+        }
+    }
     function check() {
         const input = document.getElementById("pw").value.toLowerCase();
         const display = document.getElementById("msg");
